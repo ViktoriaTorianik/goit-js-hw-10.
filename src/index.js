@@ -18,6 +18,6 @@ fetchBreeds()
 
 selektEl.addEventListener('change', onSelectCat)
 function onSelectCat(e) {
-    const id = e.target.value
+  const id = e.target.value
   fetchCatByBreed(id).then(elem=>console.log(elem))
 }
