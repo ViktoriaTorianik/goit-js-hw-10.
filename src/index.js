@@ -8,7 +8,8 @@ const sel = new SlimSelect({
   select: '.breed-select'
 })
 
-const { selektEl, catInfo } = refs
+const { selektEl, catInfo, loaderEl } = refs
+
 
 fetchBreeds()
     .then(element =>
@@ -22,8 +23,11 @@ function onSelectCat(e) {
   const id = e.target.value
   console.log(id);
   
+  loaderEl.classList.remove('js-style')
+  catInfo.innerHTML = "";
   fetchCatByBreed(id).then(data =>
   // console.log(data))
-    catInfo.insertAdjacentHTML('afterbegin', creatMarkupCat(data)))
-  .catch(console.log)
+    catInfo.innerHTML = (creatMarkupCat(data)))
+    .catch(console.log)
+  
 }
