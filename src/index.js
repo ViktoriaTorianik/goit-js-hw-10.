@@ -1,6 +1,6 @@
 import { fetchBreeds, fetchCatByBreed } from "./js/services/cat-api";
-
-import creatMarkup from "./js/services/creatMurkup";
+import { creatMarkup, creatMarkupCat } from "./js/services/creatMurkup";
+// import creatMarkup from "./js/services/creatMurkup";
 import refs from "./js/refs";
 import SlimSelect from 'slim-select'
 
@@ -8,7 +8,7 @@ const sel = new SlimSelect({
   select: '.breed-select'
 })
 
-const { selektEl } = refs
+const { selektEl, catInfo } = refs
 
 fetchBreeds()
     .then(element =>
@@ -17,7 +17,12 @@ fetchBreeds()
     .catch(console.log);
 
 selektEl.addEventListener('change', onSelectCat)
+
 function onSelectCat(e) {
   const id = e.target.value
-  fetchCatByBreed(id).then(elem=>console.log(elem))
+  console.log(id);
+  
+  fetchCatByBreed(id).then(data =>
+  console.log(data))
+  //  catInfo.insertAdjacentHTML('afterbegin', creatMarkupCat(data)))
 }
