@@ -23,6 +23,7 @@ function onSelectCat(e) {
   console.log(id);
   
   fetchCatByBreed(id).then(data =>
-  console.log(data))
-  //  catInfo.insertAdjacentHTML('afterbegin', creatMarkupCat(data)))
+  // console.log(data))
+    catInfo.insertAdjacentHTML('afterbegin', creatMarkupCat(data))
+  .catch(console.log))
 }

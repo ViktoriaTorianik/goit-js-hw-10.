@@ -1,5 +1,5 @@
 import refs from "../refs"
-const { selektEl } = refs
+const { selektEl, catInfo } = refs
 
 function creatMarkup(data) {
    return  data.map(({ id, name }) => ({ text: name, value: id }))
@@ -8,10 +8,10 @@ function creatMarkup(data) {
 
 function creatMarkupCat(arr) {
    
-   return arr.map(({ url, breeds: ( name, description, temperament ) })) `<img src="${url}" alt="${name}" width = 300px />
-      <h1>${name}</h1>
-      <p>${description}</p>
-      <p>${temperament}</p>`
+   return `<img src="${arr.url}" alt="${arr.name}" width = 300px />
+      <h1>${arr.name}</h1>
+      <p>${arr.description}</p>
+      <p>${arr.temperament}</p>`
 }
 
 export {creatMarkup, creatMarkupCat}
