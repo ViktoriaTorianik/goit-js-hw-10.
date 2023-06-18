@@ -6,14 +6,14 @@ function creatMarkup(data) {
    
 };
 
-function creatMarkupCat(arr) {
-   
-   return `<img src="${arr.url}" alt="${arr.breeds
+function creatMarkupCat(arrey) {
+      console.log(arrey);
+   return arrey.map( arr =>`<img src="${arr.url}" alt="${arr.breeds[0]
 .name}" width = 300px />
-      <h1>${arr.breeds.
+      <h1>${arr.breeds[0].
 name}</h1>
-      <p>${arr.breeds.description}</p>
-      <p>${arr.breeds.temperament}</p>`
+      <p>${arr.breeds[0].description}</p>
+      <p>${arr.breeds[0].temperament}</p>`) 
 }
 
 export {creatMarkup, creatMarkupCat}
