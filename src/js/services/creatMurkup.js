@@ -8,10 +8,12 @@ function creatMarkup(data) {
 
 function creatMarkupCat(arr) {
    
-   return `<img src="${arr.url}" alt="${arr.name}" width = 300px />
-      <h1>${arr.name}</h1>
-      <p>${arr.description}</p>
-      <p>${arr.temperament}</p>`
+   return `<img src="${arr.url}" alt="${arr.breeds
+.name}" width = 300px />
+      <h1>${arr.breeds.
+name}</h1>
+      <p>${arr.breeds.description}</p>
+      <p>${arr.breeds.temperament}</p>`
 }
 
 export {creatMarkup, creatMarkupCat}
