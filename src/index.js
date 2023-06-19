@@ -14,7 +14,9 @@ const { selektEl, catInfo, loaderEl} = refs
 
 fetchBreeds()
     .then(element =>
-        sel.setData(creatMarkup(element))
+    {
+      sel.setData(creatMarkup(element));
+    catInfo.innerHTML =" "}
     )
   .catch(error => {
       Notiflix.Notify.failure(
@@ -27,9 +29,9 @@ selektEl.addEventListener('change', onSelectCat)
 function onSelectCat(e) {
   const id = e.target.value
   console.log(id);
-  
+ 
   loaderEl.classList.remove('js-style')
-  catInfo.classList.remove('js-style')
+  
   fetchCatByBreed(id).then(data =>
   // console.log(data))
     catInfo.innerHTML = (creatMarkupCat(data))
@@ -39,6 +41,9 @@ function onSelectCat(e) {
         'Oops! Something went wrong! Try reloading the page!'
       );
     })
-    .finally(()=>loaderEl.classList.add('js-style'))
+    .finally(() => {
+      loaderEl.classList.add('js-style');
+      catInfo.classList.remove('js-style')
+       })
   
 }

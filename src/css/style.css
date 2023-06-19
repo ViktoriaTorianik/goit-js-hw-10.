@@ -29,3 +29,16 @@
         transform: translateX(150%) rotate(360deg);
     }
 }
+.card-info {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+   
+}
+.cat-info{
+    display: flex;
+    padding-top: 20px;
+}
+.photo{
+    box-shadow: 10px 1px 5px rgb(124, 119, 119);
+}
