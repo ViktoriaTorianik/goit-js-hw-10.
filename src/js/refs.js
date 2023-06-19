@@ -5,6 +5,6 @@ export default {
     errorEl: document.querySelector('.error'),
     catInfo: document.querySelector('.cat-info'),
     loaderEl: document.querySelector('.loader'),
-    errorEl: document.querySelector('.error')
+    optionEl: document.querySelector('.option')
 
 }

@@ -1,36 +1,31 @@
 .js-style {
     display: none;
 }
+
 .loader {
     width: 48px;
     height: 48px;
+    background: #fff;
     border-radius: 50%;
-    display: inline-block;
-    border-top: 4px solid #FFF;
-    border-right: 4px solid transparent;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
+    position: relative;
+    animation: roll 1s ease-in-out infinite alternate;
 }
 
-.loader::after {
-    content: '';
-    box-sizing: border-box;
+.loader:after {
+    content: "";
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 48px;
-    height: 48px;
+    inset: 5px;
     border-radius: 50%;
-    border-bottom: 4px solid #FF3D00;
-    border-left: 4px solid transparent;
+    border: 5px solid;
+    border-color: #ff3d00 transparent;
 }
 
-@keyframes rotation {
+@keyframes roll {
     0% {
-        transform: rotate(0deg);
+        transform: translateX(-150%) rotate(0deg);
     }
 
     100% {
-        transform: rotate(360deg);
+        transform: translateX(150%) rotate(360deg);
     }
 }

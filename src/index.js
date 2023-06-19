@@ -9,7 +9,7 @@ const sel = new SlimSelect({
   select: '.breed-select'
 })
 
-const { selektEl, catInfo, loaderEl,errorEl } = refs
+const { selektEl, catInfo, loaderEl,optionEl} = refs
 
 
 fetchBreeds()
@@ -20,16 +20,16 @@ fetchBreeds()
       Notiflix.Notify.failure(
         'Oops! Something went wrong! Try reloading the page!'
       );
-  })
-  .finally(()=>loaderEl.classList.add('js-style'));
+  });
 
 selektEl.addEventListener('change', onSelectCat)
 
 function onSelectCat(e) {
   const id = e.target.value
   console.log(id);
+  
   loaderEl.classList.remove('js-style')
-  catInfo.innerHTML = " ";
+  // optionEl.innerHTML = " ";
   fetchCatByBreed(id).then(data =>
   // console.log(data))
     catInfo.innerHTML = (creatMarkupCat(data))
