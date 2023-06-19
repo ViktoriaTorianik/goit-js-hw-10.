@@ -1,0 +1,2 @@
+.js-style{display:none}.loader{width:48px;height:48px;box-sizing:border-box;border-top:4px solid #fff;border-right:4px solid rgba(0,0,0,0);border-radius:50%;animation:rotation 1s linear infinite;display:inline-block}.loader:after{content:"";box-sizing:border-box;width:48px;height:48px;border-bottom:4px solid #ff3d00;border-left:4px solid rgba(0,0,0,0);border-radius:50%;position:absolute;top:0;left:0}@keyframes rotation{0%{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+/*# sourceMappingURL=index.1d43817b.css.map */
