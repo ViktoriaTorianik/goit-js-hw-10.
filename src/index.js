@@ -9,7 +9,7 @@ const sel = new SlimSelect({
   select: '.breed-select'
 })
 
-const { selektEl, catInfo, loaderEl,optionEl} = refs
+const { selektEl, catInfo, loaderEl} = refs
 
 
 fetchBreeds()
@@ -29,7 +29,7 @@ function onSelectCat(e) {
   console.log(id);
   
   loaderEl.classList.remove('js-style')
-  // optionEl.innerHTML = " ";
+  catInfo.classList.remove('js-style')
   fetchCatByBreed(id).then(data =>
   // console.log(data))
     catInfo.innerHTML = (creatMarkupCat(data))
