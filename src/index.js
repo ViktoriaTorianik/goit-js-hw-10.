@@ -41,9 +41,7 @@ function onSelectCat(e) {
         'Oops! Something went wrong! Try reloading the page!'
       );
     })
-    .finally(() => {
-      loaderEl.classList.add('js-style');
-      catInfo.classList.remove('js-style')
-       })
+    .finally(() => 
+      loaderEl.classList.add('js-style'))
   
 }
